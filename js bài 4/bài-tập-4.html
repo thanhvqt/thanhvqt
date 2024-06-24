@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <script>
+        let month = parseInt(prompt("Nhập vào 1 tháng (1-12):"));
+        if (!isNaN(month) && month >= 1 && month <= 12) {
+            //kiểm tra tháng có bao nhiêu ngày 
+            if (month === 2) {
+                let nam = parseInt(prompt("Nhập vào 1 năm"));
+                let checknamNhuan = (nam % 4 === 0 && nam % 100 !== 0) || nam % 400 === 0;
+                console.log("Check năm nhuận là: " + checknamNhuan);
+                if (checknamNhuan) {
+                    console.log("Tháng 2 năm " + nam + " có 29 ngày");
+                } else {
+                    console.log(" Tháng 2 năm " + nam + " có 28 ngày");
+                }
+            } else if (month === 4 || month === 6 || month === 9 || month === 11) {
+                console.log(" Tháng " + month + " có 30 ngày");
+            } else {
+                console.log(" Tháng " + month + " có 31 ngày");
+            }
+
+        } else {
+            console.log("Tháng không hợp lệ, vui lòng nhập lại tháng từ 1 đến 12 ");
+        }
+    </script>
+</body>
+
+</html>

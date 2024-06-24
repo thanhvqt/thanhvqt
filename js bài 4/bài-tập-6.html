@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        .container {
+            width: 100%;
+            height: 100vh;
+            background-color: pink;
+            text-align: center;
+        }
+        
+        .container h1 {
+            font-size: 70px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: whitesmoke;
+        }
+        
+        .btn {
+            font-size: 18px;
+            padding: 10px 18px;
+            border-radius: 10px;
+            background-color: yellowgreen;
+            cursor: pointer;
+            margin: 30px 10px;
+        }
+        
+        .alert {
+            width: 200px;
+            height: 70px;
+            border-radius: 10px;
+            border: 1px solid blueviolet;
+            margin: auto;
+            position: relative;
+            bottom: 80px;
+            background-color: gainsboro;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="smallconatiner">
+            <h1>Do you love me ?</h1>
+            <button class="btn" id="yes">Yes</button>
+            <button class="btn" id="no">No</button>
+            <div class="alert" id="message">
+                <h2>I love you babe</h2>
+            </div>
+        </div>
+    </div>
+    <script>
+        let yes = document.getElementById("yes");
+        let no = document.getElementById("no");
+        let message = document.getElementById("message");
+
+        no.addEventListener("mouseover", () => {
+            no.style.position = "absolute";
+            no.style.top = Math.floor(Math.random() * 40) + "vh";
+            no.style.left = Math.floor(Math.random() * 40) + "vw";
+        })
+        yes.addEventListener("click", () => {
+            message.style.display = "block";
+        })
+        message.addEventListener("click", () => {
+            message.style.display = "none"
+        })
+    </script>
+</body>
+
+</html>

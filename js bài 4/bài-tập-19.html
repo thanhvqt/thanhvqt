@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <script type="text/javascript">
+        //ax2 + bx + c = 0
+        var a, b, c;
+        a = parseFloat(prompt("Nhập (a) ="));
+        b = parseFloat(prompt("Nhập (b) ="));
+        c = parseFloat(prompt("Nhập (c) ="));
+        if (a == 0) {
+            if (b == 0) {
+                if (c == 0) {
+                    alert("Phương trình vô số nghiệm");
+                } else {
+                    alert("Phương trình vô nghiệm");
+                }
+            } else {
+                x = -c / b;
+                alert('Nghiệm của phương trình x =' + x);
+            }
+        } else {
+            dt = b * b - 4 * a * c;
+            if (dt < 0) {
+                alert('Phương trình vô nghiệm');
+            } else if (dt == 0) {
+                x = -b / (2 * a);
+                alert('Nghiệm phương trình x1 = x2 =' + x);
+            } else {
+                x1 = (-b + Math.sqrt(dt)) / (2 * a);
+                x2 = (-b - Math.sqrt(dt)) / (2 * a);
+                alert('Nghiệm x1 = ${x1}, x2 = ${x2}');
+            }
+        }
+    </script>
+</body>
+
+</html>

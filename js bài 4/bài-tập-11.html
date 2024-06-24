@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <script>
+        let Toán = parseInt(prompt('Nhập điểm toán vào'));
+        let Lý = parseInt(prompt('Nhập điểm lý vào'));
+        let Hóa = parseInt(prompt('Nhập điểm hóa vào'));
+        let Sinh = parseInt(prompt('Nhập điểm sinh vào'));
+        let Văn = parseInt(prompt('Nhập điểm văn vào'));
+        let Anh = parseInt(prompt('Nhập điểm anh vào'));
+        let đtb = (Toán * 2 + Văn * 2 + Anh * 2 + Lý + Hóa + Sinh) / 9;
+        Toán = Number(Toán);
+        Lý = Number(Lý);
+        Hóa = Number(Hóa);
+        Sinh = Number(Sinh);
+        Văn = Number(Văn);
+        Anh = Number(Anh);
+        if (đtb >= 9.5) {
+            alert('Học Sinh Xuất xắc');
+        } else if (đtb >= 8.5 && đtb < 9.5) {
+            alert('Học Sinh Giỏi');
+        } else if (đtb >= 7.5 && đtb < 8.5) {
+            alert('Học Sinh Khá');
+        } else if (đtb >= 5.5 && đtb < 7.5) {
+            alert('Học Sinh Trung Bình');
+        } else if (đtb >= 3.5 && đtb < 5.5) {
+            alert('Học Sinh Yếu');
+        } else {
+            alert('Học Sinh Kém');
+        }
+    </script>
+</body>
+
+</html>

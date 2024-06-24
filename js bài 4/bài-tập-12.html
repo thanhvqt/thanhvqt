@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <script>
+        let đơn = parseInt(prompt('Nhập số tiền hàng'));
+        đơn = Number(đơn);
+        if (đơn > 0 && đơn < 2000000) {
+            alert("hoa hồng sẽ nhận được 3% trên tổng ");
+        } else if (đơn > 2000000 && đơn < 5000000) {
+            alert("hoa hồng sẽ nhận được 5% trên tổng ");
+        } else {
+            alert("hoa hồng sẽ nhận được 10% trên tổng ");
+        }
+    </script>
+</body>
+
+</html>
