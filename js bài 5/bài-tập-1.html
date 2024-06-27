@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <h2>Javascript loops</h2>
+    <p id="demo"></p>
+    <script>
+        let text = "";
+        let i;
+        for (i = 0; i < 5; i++) {
+            console.log("The Number is " + i);
+            text += "The Number is " + i + "<br>";
+        }
+        document.getElementById("demo").innerHTML = text;
+    </script>
+</body>
+
+</html>

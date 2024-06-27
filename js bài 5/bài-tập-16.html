@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <script>
+        let phamvi = Number(prompt("Trò chơi đoán số từ 0 - "))
+        let nhapso = Number(prompt("Nhập số từ 0- "))
+        let sorandom
+        if (phamvi) {
+            sorandom = Math.floor(Math.random() * phamvi)
+            if (sorandom == nhapso) {
+                alert("Bạn đã đoán đúng")
+            } else {
+                while (sorandom != nhapso) {
+                    alert("Chia buồn cho bạn là số: " + sorandom)
+                    nhapso = Number(prompt("Nhập vào số bạn muốn đoán"))
+                }
+                alert("Bạn đã đoán đúng")
+            }
+        }
+    </script>
+</body>
+
+</html>

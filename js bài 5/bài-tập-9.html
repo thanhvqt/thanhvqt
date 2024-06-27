@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <script>
+        let nhietdo = prompt("Nhập nhiệt độ vào: ");
+        nhietdo = Number(nhietdo)
+        while (nhietdo < 20 || nhietdo > 100) {
+            if (nhietdo < 20) {
+                alert("tăng nhiệt độ");
+                nhietdo = Number(prompt("Nhập vào nhiệt độ"))
+            } else if (nhietdo > 100) {
+                alert("giảm nhiệt độ");
+                nhietdo = Number(prompt("Nhập vào nhiệt độ"))
+            } else {
+                alert("Nhiệt độ bình thường")
+            }
+        }
+    </script>
+</body>
+
+</html>

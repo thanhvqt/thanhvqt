@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <script>
+        let number = "Enter the number: ";
+        let count = 0;
+        let N = 2;
+        for (let i = 0;; i++) {
+            if (i <= 1) {
+                number = 0;
+            } else if (i == 2 || i == 3) {
+                count++;
+                N += i + " ";
+            } else if (i % 2 == 0) {
+                number = 0;
+            } else if (i >= 4) {
+                for (let j = 3; j < (i - 1); j++) {
+                    if (i / j == 0) {
+                        number = 0;
+                        break
+                    } else {
+                        number++;
+                    }
+                }
+                if (number > 0) {
+                    N += i + "";
+                    count++;
+                    if (count == 20) {
+                        break;
+                    }
+                }
+            }
+        }
+        document.write("20 số nguyên tố đầu tiên: " + N);
+    </script>
+</body>
+
+</html>
