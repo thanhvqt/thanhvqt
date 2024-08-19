@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <p>
+        <label>Feet</label>
+        <input id="inputFahrenheit" type="number" placeholder="Feet" oninput="meterToFeet(this.value)" onchange="meterToFeet(this.value)">
+    </p>
+    <p>Meeter: <span id="Meeter"></span></p>
+    <script>
+        function meterToFeet(valNum) {
+            valNum = parseFloat(valNum);
+            document.getElementById("Meeter").innerHTML = valNum * 0.305;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .body{
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .img-container{
+            overflow: hidden;
+        }
+        #dynamic{
+            width: 300px;
+            height: 200px;
+            transition: transform 0.3 ease;
+        }
+        #dynamic:hover{
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="img-container">
+        <img src="https://i.redd.it/3dkg426pz8vb1.jpg" alt="ảnh" id="dynamic">
+    </div>
+    <script>
+        const images = document.getElementById('dynamic');
+        images.addEventListener('mouseover', function(){
+            img.src='image2.jpg';
+        });
+        images.addEventListener('mouseout', function(){
+            img.src='image1.jpg';
+        });
+    </script>
+</body>
+</html>

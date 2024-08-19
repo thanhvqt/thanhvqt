@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <script>
+        while (true) {
+            let a = Number(prompt("Nhập số vào a "));
+            while (!Number.isInteger(a) || a <= 0) {
+                a = Number(prompt("Nhập lại số vào a "));
+            }
+            alert("Giá trị a là hợp lệ, a = " + a);
+            let isPrime = true;
+            for (i = 2; i < a; i++) {
+                if (a % i === 0 && a >= 100) {
+                    isPrime = false;
+                    break;
+                }
+            }
+            if (isPrime) {
+                alert(a + " là số nguyên tố");
+            } else {
+                alert(a + " không là số nguyên tố");
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .body{
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: aqua;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .img-container{
+            overflow: hidden;
+            align-items: center;
+        }
+        #furina{
+            width: 300px;
+            height: 200px;
+            transition: transform 0.3s ease;
+        }
+        #furina:hover{
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="img-conatiner">
+        <img id="furina" src="https://pbs.twimg.com/media/GQ4s_0_XYAAmcJL.jpg:large" alt="furina">
+    </div>
+    <script>
+        const images = document.getElementById('furina');
+        images.addEventListener('mouseover', function(){
+            img.src = 'furina2.jpg';
+        });
+        images.addEventListener('mouseout', function(){
+            img.src = 'furina1.jpg2';
+        });
+    </script>
+</body>
+</html>

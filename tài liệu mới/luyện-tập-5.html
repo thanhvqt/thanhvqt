@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #head {
+  width: 100%;
+  overflow: auto;
+}
+
+.logo {
+  width: 20%;
+  background-color: green;
+  float: left;
+  box-sizing: border-box;
+  padding: 30px;
+  text-align: center;
+}
+
+.banner {
+  width: 80%;
+  background-color: violet;
+  float: right;
+  box-sizing: border-box;
+  padding: 30px;
+  text-align: center;
+}
+
+#head-link {
+  background-color: aquamarine;
+  padding: 10px;
+  text-align: center;
+}
+
+.content::after {
+  content: '';
+  clear: both;
+  display: table;
+}
+
+#left, #content, #right {
+  width: 15%;
+  float: left;
+  box-sizing: border-box;
+  padding: 150px 30px;
+  background-color: antiquewhite;
+}
+
+#content {
+  width: 70%;
+  background-color: yellow;
+  text-align: center;
+}
+
+#right {
+  background-color: wheat;
+}
+
+footer {
+  padding: 30px;
+  background-color: pink;
+  text-align: center;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div id="head">
+          <div class="logo">logo</div>
+          <div class="banner">banner</div>
+        </div>
+        <div id="head-link">head-link</div>
+  </header>
+  <section class="content">
+    <div id="left">left</div>
+    <div id="content">content</div>
+    <div id="right">right</div>
+  </section>
+  <footer>footer</footer>
+  
+</body>
+</html>
