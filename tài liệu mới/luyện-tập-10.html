@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .body{
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            justify-content: center;
+        }
+        .animation{
+            width: 100px;
+            height: 100px;
+            background-color: aquamarine;
+            transition: transform 0.5s ease-in-out;
+        }
+        .animation:hover{
+            transform: scale(1.5) rotate(45deg);
+        }
+        @keyframes bounce {
+            0%, 100%{
+                transform: translateY(0);
+            }
+            50%{
+                transform: translateY(-50px);
+            }        
+        }
+        .animation{
+            animation: bounce 2s infinite;
+        }
+        @keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-50px);
+    }
+}
+
+@keyframes colorChange {
+    0%, 100% {
+        background-color: #3498db;
+    }
+    50% {
+        background-color: #e74c3c;
+    }
+}
+.animation{
+     animation: bounce 2s infinite, colorChange 2s infinite;
+}
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes scale {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+}
+
+@keyframes colorChange {
+    0%, 100% {
+        background-color: #3498db;
+    }
+    50% {
+        background-color: #e74c3c;
+    }
+}
+.animation{
+    animation: rotate 4s linear infinite, scale 2s ease-in-out infinite, colorChange 4s linear infinite;
+}
+@media (max-width: 600px) {
+    .animation{
+        animation: none;
+    }
+}
+@media (prefers-reduced-motion: reduce) {
+    .animation{
+        animation: none;
+    }
+}
+    </style>
+</head>
+<body>
+    <h1>Web animation của tôi</h1>
+    <div class="animation"></div>
+</body>
+</html>
